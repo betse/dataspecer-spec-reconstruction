@@ -1,0 +1,13 @@
+@startuml
+set namespaceSeparator none
+class Teacher {
+  "Teacher name": http://www.w3.org/2000/01/rdf-schema#Literal
+}
+
+class Course {
+  "Course name": http://www.w3.org/2000/01/rdf-schema#Literal
+  "Course code": http://www.w3.org/2000/01/rdf-schema#Literal
+}
+
+Course "1..1" -- Teacher :  taughtBy
+@enduml

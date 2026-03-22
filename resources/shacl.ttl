@@ -1,0 +1,60 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+<https://example.com/cztkv/#> rdfs:member <https://example.com/cztkv/#https://example.org/vocab/TeacherShape>, <https://example.com/cztkv/#https://example.org/vocab/CourseShape>.
+
+<https://example.com/cztkv/#https://example.org/vocab/TeacherShape> a sh:NodeShape;
+    rdfs:seeAlso <https://example.com/cztkv/#Teacher>;
+    sh:closed false;
+    sh:targetClass <https://example.org/vocab/Teacher>.
+
+<https://example.com/cztkv/#https://example.org/vocab/CourseShape> a sh:NodeShape;
+    rdfs:seeAlso <https://example.com/cztkv/#Course>;
+    sh:closed false;
+    sh:targetClass <https://example.org/vocab/Course>.
+
+<https://example.com/cztkv/#https://example.org/vocab/CourseShape/-2487c1cd> a sh:PropertyShape;
+    sh:name "Course code"@en;
+    sh:nodeKind sh:Literal;
+    sh:path <https://example.org/vocab/courseCode>;
+    sh:maxCount 1;
+    sh:minCount 1.
+
+<https://example.com/cztkv/#https://example.org/vocab/CourseShape> sh:property <https://example.com/cztkv/#https://example.org/vocab/CourseShape/-2487c1cd>.
+
+<https://example.com/cztkv/#https://example.org/vocab/CourseShape/6830a455> a sh:PropertyShape;
+    sh:name "Course name"@en;
+    sh:nodeKind sh:Literal;
+    sh:path <https://example.org/vocab/courseName>;
+    sh:maxCount 1;
+    sh:minCount 1.
+
+<https://example.com/cztkv/#https://example.org/vocab/CourseShape> sh:property <https://example.com/cztkv/#https://example.org/vocab/CourseShape/6830a455>.
+
+<https://example.com/cztkv/#https://example.org/vocab/CourseShape/-ba858a0> a sh:PropertyShape;
+    sh:name "taughtBy"@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <https://example.com/vocabulary#taughtBy>;
+    sh:class <https://example.org/vocab/Teacher>.
+
+<https://example.com/cztkv/#https://example.org/vocab/CourseShape> sh:property <https://example.com/cztkv/#https://example.org/vocab/CourseShape/-ba858a0>.
+
+<https://example.com/cztkv/#https://example.org/vocab/TeacherShape/-128eb557> a sh:PropertyShape;
+    sh:name "Teacher name"@en;
+    sh:nodeKind sh:Literal;
+    sh:path <https://example.org/vocab/teacherName>;
+    sh:maxCount 1;
+    sh:minCount 1.
+
+<https://example.com/cztkv/#https://example.org/vocab/TeacherShape> sh:property <https://example.com/cztkv/#https://example.org/vocab/TeacherShape/-128eb557>.
+
+<https://example.com/cztkv/#https://example.org/vocab/TeacherShape/50254dba> a sh:PropertyShape;
+    sh:name "teacher email"@en;
+    sh:nodeKind sh:Literal;
+    sh:path <https://example.org/vocab/email>;
+    sh:maxCount 1.
+
+<https://example.com/cztkv/#https://example.org/vocab/TeacherShape> sh:property <https://example.com/cztkv/#https://example.org/vocab/TeacherShape/50254dba>.
+

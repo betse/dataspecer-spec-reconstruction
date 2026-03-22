@@ -1,0 +1,98 @@
+{
+  "source": "./resources/model.owl.ttl",
+  "classes": [
+    {
+      "iri": "https://example.org/vocab/Course",
+      "label": [
+        "Course"
+      ],
+      "defination": [
+        "A university course offered to students as part of a study program."
+      ]
+    },
+    {
+      "iri": "https://example.org/vocab/Teacher",
+      "label": [
+        "Teacher"
+      ],
+      "defination": [
+        "A person responsible for teaching or supervising a university course."
+      ]
+    }
+  ],
+  "properties": [
+    {
+      "iri": "https://example.org/vocab/courseCode",
+      "label": [
+        "Code"
+      ],
+      "defination": [
+        "A unique identifier assigned to a course."
+      ],
+      "domain": [
+        "https://example.org/vocab/Course"
+      ],
+      "range": [
+        "http://www.w3.org/2000/01/rdf-schema#Literal"
+      ]
+    },
+    {
+      "iri": "https://example.org/vocab/courseName",
+      "label": [
+        "name"
+      ],
+      "defination": [
+        "The official name of the course."
+      ],
+      "domain": [
+        "https://example.org/vocab/Course"
+      ],
+      "range": [
+        "http://www.w3.org/2000/01/rdf-schema#Literal"
+      ]
+    },
+    {
+      "iri": "https://example.com/vocabulary#taughtBy",
+      "label": [
+        "taughtBy"
+      ],
+      "defination": [],
+      "domain": [
+        "https://example.org/vocab/Course"
+      ],
+      "range": [
+        "https://example.org/vocab/Teacher"
+      ]
+    },
+    {
+      "iri": "https://example.org/vocab/teacherName",
+      "label": [
+        "name"
+      ],
+      "defination": [
+        "The full name of the teacher."
+      ],
+      "domain": [
+        "https://example.org/vocab/Teacher"
+      ],
+      "range": [
+        "http://www.w3.org/2000/01/rdf-schema#Literal"
+      ]
+    },
+    {
+      "iri": "https://example.org/vocab/email",
+      "label": [
+        "email"
+      ],
+      "defination": [
+        "The email address of the teacher."
+      ],
+      "domain": [
+        "https://example.org/vocab/Teacher"
+      ],
+      "range": [
+        "http://www.w3.org/2000/01/rdf-schema#Literal"
+      ]
+    }
+  ]
+}

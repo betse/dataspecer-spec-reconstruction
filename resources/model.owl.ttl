@@ -1,0 +1,44 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix prof: <http://www.w3.org/ns/dx/prof/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix : <https://example.com/vocabulary#>.
+
+<https://example.com/vocabulary#> a owl:Ontology, prof:Profile.
+<https://example.org/vocab/Course> a owl:Class, rdfs:Class;
+    rdfs:label "Course"@en;
+    rdfs:comment "A university course offered to students as part of a study program."@en;
+    rdfs:isDefinedBy <https://example.com/vocabulary#>.
+<https://example.org/vocab/courseCode> a rdf:Property, owl:DatatypeProperty;
+    rdfs:label "Code"@en;
+    rdfs:comment "A unique identifier assigned to a course."@en;
+    rdfs:isDefinedBy <https://example.com/vocabulary#>;
+    rdfs:domain <https://example.org/vocab/Course>;
+    rdfs:range rdfs:Literal.
+<https://example.org/vocab/courseName> a rdf:Property, owl:DatatypeProperty;
+    rdfs:label "name"@en;
+    rdfs:comment "The official name of the course."@en;
+    rdfs:isDefinedBy <https://example.com/vocabulary#>;
+    rdfs:domain <https://example.org/vocab/Course>;
+    rdfs:range rdfs:Literal.
+:taughtBy a rdf:Property, owl:ObjectProperty;
+    rdfs:label "taughtBy"@en;
+    rdfs:isDefinedBy <https://example.com/vocabulary#>;
+    rdfs:domain <https://example.org/vocab/Course>;
+    rdfs:range <https://example.org/vocab/Teacher>.
+<https://example.org/vocab/Teacher> a owl:Class, rdfs:Class;
+    rdfs:label "Teacher"@en;
+    rdfs:comment "A person responsible for teaching or supervising a university course."@en;
+    rdfs:isDefinedBy <https://example.com/vocabulary#>.
+<https://example.org/vocab/teacherName> a rdf:Property, owl:DatatypeProperty;
+    rdfs:label "name"@en;
+    rdfs:comment "The full name of the teacher."@en;
+    rdfs:isDefinedBy <https://example.com/vocabulary#>;
+    rdfs:domain <https://example.org/vocab/Teacher>;
+    rdfs:range rdfs:Literal.
+<https://example.org/vocab/email> a rdf:Property, owl:DatatypeProperty;
+    rdfs:label "email"@en;
+    rdfs:comment "The email address of the teacher."@en;
+    rdfs:isDefinedBy <https://example.com/vocabulary#>;
+    rdfs:domain <https://example.org/vocab/Teacher>;
+    rdfs:range rdfs:Literal.

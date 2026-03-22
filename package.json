@@ -1,0 +1,20 @@
+{
+  "name": "dataspacer",
+  "version": "1.0.0",
+  "description": "Small exploration scripts for reading Dataspecer-generated resources and building intermediate JSON outputs.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "fetch": "node fetch-resources.js",
+    "inspect": "node inspect-resource.js",
+    "parse:turtle": "node parse-turtle-demo.js",
+    "build:model": "node build-model-spec.js",
+    "build:ap": "node build-application-profile.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "n3": "^2.0.3"
+  }
+}

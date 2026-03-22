@@ -1,0 +1,129 @@
+@prefix : <https://example.com/cztkv/#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix dsv: <https://w3id.org/dsv#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix vann: <http://purl.org/vocab/vann/>.
+@prefix cardinality: <https://w3id.org/dsv/cardinality#>.
+@prefix requirement: <https://w3id.org/dsv/requirement-level#>.
+@prefix role: <https://w3id.org/dsv/class-role#>.
+@prefix prof: <http://www.w3.org/ns/dx/prof/>.
+
+
+<https://example.com/cztkv/#> a prof:Profile, dsv:ApplicationProfile.
+:Teacher dct:isPartOf <https://example.com/cztkv/#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource <https://example.org/vocab/Teacher>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource <https://example.org/vocab/Teacher>
+];
+    a dsv:ClassProfile;
+    dsv:class <https://example.org/vocab/Teacher>.
+:Course dct:isPartOf <https://example.com/cztkv/#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource <https://example.org/vocab/Course>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource <https://example.org/vocab/Course>
+];
+    a dsv:ClassProfile;
+    dsv:class <https://example.org/vocab/Course>.
+:Teacher dct:isPartOf <https://example.com/cztkv/#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource <https://example.org/vocab/Teacher>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource <https://example.org/vocab/Teacher>
+];
+    a dsv:ClassProfile;
+    dsv:class <https://example.org/vocab/Teacher>.
+
+<https://example.com/cztkv/#Course.taughtby> dct:isPartOf <https://example.com/cztkv/#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource <https://example.com/vocabulary#taughtBy>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource <https://example.com/vocabulary#taughtBy>
+];
+    dsv:property <https://example.com/vocabulary#taughtBy>;
+    dsv:domain :Course;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :Teacher.
+
+<https://example.com/cztkv/#Teacher.teachername> dct:isPartOf <https://example.com/cztkv/#>;
+    a dsv:TermProfile;
+    skos:prefLabel "Teacher name"@en;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource <https://example.org/vocab/teacherName>
+];
+    dsv:cardinality cardinality:11;
+    dsv:property <https://example.org/vocab/teacherName>;
+    dsv:domain :Teacher;
+    dsv:requirementLevel requirement:mandatory;
+    a dsv:DatatypePropertyProfile;
+    dsv:datatypePropertyRange rdfs:Literal.
+
+<https://example.com/cztkv/#Course.coursecode> dct:isPartOf <https://example.com/cztkv/#>;
+    a dsv:TermProfile;
+    skos:prefLabel "Course code"@en;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource <https://example.org/vocab/courseCode>
+];
+    dsv:cardinality cardinality:11;
+    dsv:property <https://example.org/vocab/courseCode>;
+    dsv:domain :Course;
+    a dsv:DatatypePropertyProfile;
+    dsv:datatypePropertyRange rdfs:Literal.
+
+<https://example.com/cztkv/#Course.coursename> dct:isPartOf <https://example.com/cztkv/#>;
+    a dsv:TermProfile;
+    skos:prefLabel "Course name"@en;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource <https://example.org/vocab/courseName>
+];
+    dsv:cardinality cardinality:11;
+    dsv:property <https://example.org/vocab/courseName>;
+    dsv:domain :Course;
+    dsv:requirementLevel requirement:mandatory;
+    a dsv:DatatypePropertyProfile;
+    dsv:datatypePropertyRange rdfs:Literal.
+
+<https://example.com/cztkv/#Teacher.email> dct:isPartOf <https://example.com/cztkv/#>;
+    a dsv:TermProfile;
+    skos:prefLabel "teacher email"@en;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource <https://example.org/vocab/email>
+];
+    dsv:cardinality cardinality:01;
+    dsv:property <https://example.org/vocab/email>;
+    dsv:domain :Teacher;
+    dsv:requirementLevel requirement:recommended;
+    a dsv:DatatypePropertyProfile;
+    dsv:datatypePropertyRange rdfs:Literal.

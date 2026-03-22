@@ -1,0 +1,163 @@
+{
+  "source": "./resources/dsv.ttl",
+  "classProfiles": [
+    {
+      "iri": "https://example.com/cztkv/#Teacher",
+      "label": [],
+      "definition": [],
+      "partOf": "https://example.com/cztkv/#",
+      "profiledClass": "https://example.org/vocab/Teacher",
+      "reuses": [
+        {
+          "property": "http://www.w3.org/2004/02/skos/core#prefLabel",
+          "fromResource": "https://example.org/vocab/Teacher"
+        },
+        {
+          "property": "http://www.w3.org/2004/02/skos/core#definition",
+          "fromResource": "https://example.org/vocab/Teacher"
+        },
+        {
+          "property": "http://www.w3.org/2004/02/skos/core#prefLabel",
+          "fromResource": "https://example.org/vocab/Teacher"
+        },
+        {
+          "property": "http://www.w3.org/2004/02/skos/core#definition",
+          "fromResource": "https://example.org/vocab/Teacher"
+        }
+      ]
+    },
+    {
+      "iri": "https://example.com/cztkv/#Course",
+      "label": [],
+      "definition": [],
+      "partOf": "https://example.com/cztkv/#",
+      "profiledClass": "https://example.org/vocab/Course",
+      "reuses": [
+        {
+          "property": "http://www.w3.org/2004/02/skos/core#prefLabel",
+          "fromResource": "https://example.org/vocab/Course"
+        },
+        {
+          "property": "http://www.w3.org/2004/02/skos/core#definition",
+          "fromResource": "https://example.org/vocab/Course"
+        }
+      ]
+    }
+  ],
+  "propertyProfiles": [
+    {
+      "iri": "https://example.com/cztkv/#Course.taughtby",
+      "label": [],
+      "definition": [],
+      "partOf": "https://example.com/cztkv/#",
+      "profiledProperty": "https://example.com/vocabulary#taughtBy",
+      "domain": "https://example.com/cztkv/#Course",
+      "range": "https://example.com/cztkv/#Teacher",
+      "propertyType": "ObjectPropertyProfile",
+      "cardinality": null,
+      "requirementLevel": null,
+      "reuses": [
+        {
+          "property": "http://www.w3.org/2004/02/skos/core#prefLabel",
+          "fromResource": "https://example.com/vocabulary#taughtBy"
+        },
+        {
+          "property": "http://www.w3.org/2004/02/skos/core#definition",
+          "fromResource": "https://example.com/vocabulary#taughtBy"
+        }
+      ]
+    },
+    {
+      "iri": "https://example.com/cztkv/#Teacher.teachername",
+      "label": [
+        "Teacher name"
+      ],
+      "definition": [],
+      "partOf": "https://example.com/cztkv/#",
+      "profiledProperty": "https://example.org/vocab/teacherName",
+      "domain": "https://example.com/cztkv/#Teacher",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "propertyType": "DatatypePropertyProfile",
+      "cardinality": {
+        "min": "1",
+        "max": "1"
+      },
+      "requirementLevel": "https://w3id.org/dsv/requirement-level#mandatory",
+      "reuses": [
+        {
+          "property": "http://www.w3.org/2004/02/skos/core#definition",
+          "fromResource": "https://example.org/vocab/teacherName"
+        }
+      ]
+    },
+    {
+      "iri": "https://example.com/cztkv/#Course.coursecode",
+      "label": [
+        "Course code"
+      ],
+      "definition": [],
+      "partOf": "https://example.com/cztkv/#",
+      "profiledProperty": "https://example.org/vocab/courseCode",
+      "domain": "https://example.com/cztkv/#Course",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "propertyType": "DatatypePropertyProfile",
+      "cardinality": {
+        "min": "1",
+        "max": "1"
+      },
+      "requirementLevel": null,
+      "reuses": [
+        {
+          "property": "http://www.w3.org/2004/02/skos/core#definition",
+          "fromResource": "https://example.org/vocab/courseCode"
+        }
+      ]
+    },
+    {
+      "iri": "https://example.com/cztkv/#Course.coursename",
+      "label": [
+        "Course name"
+      ],
+      "definition": [],
+      "partOf": "https://example.com/cztkv/#",
+      "profiledProperty": "https://example.org/vocab/courseName",
+      "domain": "https://example.com/cztkv/#Course",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "propertyType": "DatatypePropertyProfile",
+      "cardinality": {
+        "min": "1",
+        "max": "1"
+      },
+      "requirementLevel": "https://w3id.org/dsv/requirement-level#mandatory",
+      "reuses": [
+        {
+          "property": "http://www.w3.org/2004/02/skos/core#definition",
+          "fromResource": "https://example.org/vocab/courseName"
+        }
+      ]
+    },
+    {
+      "iri": "https://example.com/cztkv/#Teacher.email",
+      "label": [
+        "teacher email"
+      ],
+      "definition": [],
+      "partOf": "https://example.com/cztkv/#",
+      "profiledProperty": "https://example.org/vocab/email",
+      "domain": "https://example.com/cztkv/#Teacher",
+      "range": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "propertyType": "DatatypePropertyProfile",
+      "cardinality": {
+        "min": "0",
+        "max": "1"
+      },
+      "requirementLevel": "https://w3id.org/dsv/requirement-level#recommended",
+      "reuses": [
+        {
+          "property": "http://www.w3.org/2004/02/skos/core#definition",
+          "fromResource": "https://example.org/vocab/email"
+        }
+      ]
+    }
+  ]
+}
